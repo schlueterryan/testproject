@@ -1,0 +1,47 @@
+<html ng-app="FantasyFootballApp">
+  <head>
+    <title>Fantasy Football</title>
+    <link rel="stylesheet" href="assets/styles/bootstrap.css"></link>
+    <link rel="stylesheet" href="assets/styles/bootstrap-theme.css"></link>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="/#/">Fantasy Football</a>
+          </div>
+
+        </div>
+        <nw-page-nav></nw-page-nav>
+      </div>
+    </nav>
+    <div ng-view class="container-fluid"></div>
+  </body>
+
+  <!-- vendor -->
+  <script src="assets/javascript/vendor/jquery-2.1.3.min.js"></script>
+  <script src="assets/javascript/vendor/angular.js"></script>
+  <script src="assets/javascript/vendor/angular-route.js"></script>
+  <script src="assets/javascript/vendor/angular-resource.js"></script>
+  <script src="assets/javascript/vendor/bootstrap.js"></script>
+  <script src="assets/javascript/vendor/ngGravatar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+
+
+  <!-- App -->
+  <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/routes.js"></script>
+
+  <!-- Directives -->
+  <script src="assets/javascript/directives/nwPageNav.js"></script>
+  <script src="assets/javascript/directives/title.js"></script>
+
+  <!-- Controllers -->
+  <script src="assets/javascript/controllers/teamsController.js"></script>
+  <script src="assets\javascript\controllers\teamsCreateController.js"></script>
+
+
+  <!-- Services -->
+  <script src="assets/javascript/services/team.js"></script>
+</html>
