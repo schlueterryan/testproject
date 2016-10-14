@@ -1,2 +1,9 @@
 
     <p>{{vm.team}}</p>
+    <h1>Fantasy Players <a class="btn btn-default" href="#/players/new">New Fantasy Player</a></h1>
+
+    <div class="row">
+      <div ng-repeat="player in vm.players" class="col-sm-12">
+        <p>{{player.name}}</p>
+      </div>
+    </div>
