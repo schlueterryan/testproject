@@ -2,8 +2,8 @@
 <form>
   <fieldset class="form-group">
     <label for="name">Name</label>
-    <input class="form-control" type="text" id="name" name="name" ng-model="team.name">
+    <input class="form-control" type="text" id="name" name="name" ng-model="vm.team.name">
   </fieldset>
 
-  <input type="submit" value="{{isSubmitting ? 'saving...' : 'Save'}}" class="btn btn-default" ng-click="saveTeam(team)" ng-disabled="isSubmitting">
+  <input type="submit" value="{{vm.isSubmitting ? 'saving...' : 'Save'}}" class="btn btn-default" ng-click="vm.saveTeam(vm.team)" ng-disabled="vm.isSubmitting">
 </form>

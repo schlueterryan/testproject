@@ -1,8 +1,8 @@
 var _ = require('lodash');
-var teams = [
-  {"id": 1, "name": "Work League"},
-  {"id": 2, "name": "Jeff city league"},
-  {"id": 3, "name": "Fantasy Family"},
+var players = [
+  {"id": 1, "name": "Johnny", "teamID" : 1},
+  {"id": 2, "name": "Tim", "teamID" : 1},
+  {"id": 3, "name": "Steve", "teamID" : 2},
 ]
 var lastId = 3;
 

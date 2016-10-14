@@ -1,3 +1,6 @@
-angular.module('FantasyFootballApp').controller('PlayerIndexController', function(Players, $scope){
-$scope.players = Team.query();
-});
+angular.module('FantasyFootballApp').controller('PlayerIndexController',
+[ '$routeParams', function ($routeParams) {
+    var vm = this;
+    vm.Players = $routeParams.team;
+
+  }]);

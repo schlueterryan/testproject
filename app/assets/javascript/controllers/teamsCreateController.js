@@ -1,13 +1,14 @@
-angular.module('FantasyFootballApp').controller('TeamsCreateController', function($scope, Team, $location){
-  $scope.team = new Team();
-  $scope.isSubmitting = false;
+angular.module('FantasyFootballApp').controller('TeamsCreateController', function(Team, $location){
+  var vm = this;
+  vm.team = new Team();
+  vm.isSubmitting = false;
 
-  $scope.saveTeam = function(team){
-    $scope.isSubmitting = true;
+  vm.saveTeam = function(team){
+  vm.isSubmitting = true;
     team.$save().then(function(){
       $location.path("/teams");
     }).finally(function(){
-      $scope.isSubmitting = false;
+      vm.isSubmitting = false;
     });
   }
 });

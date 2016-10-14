@@ -1,3 +1,4 @@
-angular.module('FantasyFootballApp').controller('TeamsController', function(Team, $scope){
-$scope.teams = Team.query();
+angular.module('FantasyFootballApp').controller('TeamsIndexController', function(Team){
+var vm = this;
+vm.teams = Team.query();
 });
