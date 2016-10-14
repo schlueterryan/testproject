@@ -11,5 +11,5 @@ app.get('/', function(req, res){
 
 // Load route
 require('./routes/team')(app);
-
+require('./routes/player')(app);
 module.exports = app;

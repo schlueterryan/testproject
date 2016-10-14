@@ -6,34 +6,34 @@ var players = [
 ]
 var lastId = 3;
 
-var buildteams = function() {
-  // Make a deep copy so we don't change the main teams array
-  var rawteams = JSON.parse(JSON.stringify(teams));
-  var builtteams = [];
+var buildplayers = function() {
+  // Make a deep copy so we don't change the main players array
+  var rawplayers = JSON.parse(JSON.stringify(players));
+  var builtplayers = [];
   var Team;
 
-  for(var i=0, l=rawteams.length; i < l; i++) {
-    Team = rawteams[i];
-    builtteams.push(Team);
+  for(var i=0, l=rawplayers.length; i < l; i++) {
+    Team = rawplayers[i];
+    builtplayers.push(Team);
   }
-  return builtteams
+  return builtplayers
 }
 
 module.exports = {
   get: function(id) {
-    return _.find(buildteams(), function(Team){
+    return _.find(buildplayers(), function(Team){
       return Team.id === id;
     });
   },
   all: function() {
-    return buildteams();
+    return buildplayers();
   },
   update: function(Team) {
     var updatedTeam;
-    for(var i=0, l=teams.length; i < l; i++) {
-      if(teams[i].id === Team.id){
-        _.assign(teams[i], Team);
-        updatedTeam = teams[i];
+    for(var i=0, l=players.length; i < l; i++) {
+      if(players[i].id === Team.id){
+        _.assign(players[i], Team);
+        updatedTeam = players[i];
         break;
       }
     }
@@ -41,10 +41,10 @@ module.exports = {
   },
   delete: function(id) {
     var deletedTeam;
-    for(var i=0, l=teams.length; i < l; i++) {
-      if(teams[i].id === id){
-        deletedTeam = teams[i];
-        teams.splice(i, 1);
+    for(var i=0, l=players.length; i < l; i++) {
+      if(players[i].id === id){
+        deletedTeam = players[i];
+        players.splice(i, 1);
         break;
       }
     }
@@ -53,7 +53,7 @@ module.exports = {
   create: function(Team) {
     lastId += 1;
     Team.id = lastId;
-    teams.push(Team)
+    players.push(Team)
     return Team;
   }
 }
